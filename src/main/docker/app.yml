@@ -1,0 +1,17 @@
+version: '2'
+services:
+    ai_projekt-app:
+        image: ai_projekt
+        external_links:
+            - ai_projekt-mongodb:mongodb
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod,swagger
+            - SPRING_DATA_MONGODB_URI=mongodb://mongodb:27017
+            - SPRING_DATA_MONGODB_DATABASE=AI_projekt
+            - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+        ports:
+            - 8080:8080
+    ai_projekt-mongodb:
+        extends:
+            file: mongodb.yml
+            service: ai_projekt-mongodb

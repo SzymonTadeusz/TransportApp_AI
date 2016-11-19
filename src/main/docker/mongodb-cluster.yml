@@ -1,0 +1,17 @@
+version: '2'
+services:
+    ai_projekt-mongodb:
+        container_name: ai_projekt-mongodb
+        image: mongo:3.3.12
+        ports:
+            - "27017:27017"
+        command: mongos --configdb ai_projekt-mongodb-config
+    ai_projekt-mongodb-node:
+        build:
+            context: .
+            dockerfile: mongodb/MongoDB.Dockerfile
+        command: mongod --replSet rs1 --noprealloc --smallfiles
+    ai_projekt-mongodb-config:
+        image: mongo:mongo:3.3.12
+        container_name: ai_projekt-mongodb-config
+        command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db
