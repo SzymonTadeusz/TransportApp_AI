@@ -2,9 +2,9 @@
   "generator-jhipster": {
     "jhipsterVersion": "3.10.0",
     "baseName": "AI_projekt",
-    "packageName": "pl.edu.wat.wcy.isi.ai.uber",
-    "packageFolder": "pl/edu/wat/wcy/isi/ai/uber",
-    "serverPort": "8080",
+    "packageName": "pl.edu.wat.wcy.isi.ai.transportApp",
+    "packageFolder": "pl/edu/wat/wcy/isi/ai/transportApp",
+    "serverPort": "8081",
     "authenticationType": "session",
     "hibernateCache": "no",
     "clusteredHttpSession": false,

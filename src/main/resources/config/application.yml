@@ -18,7 +18,7 @@ management:
             enabled: false # When using the MailService, configure an SMTP server and set this to true
 spring:
     application:
-        name: AI_projekt
+        name: TransportApp
     profiles:
         # The commented value for `active` can be replaced with valid spring profiles to load.
         # Otherwise, it will be filled in by maven when building the WAR file
@@ -63,14 +63,10 @@ jhipster:
         from: AI_projekt@localhost
     swagger:
         title: AI_projekt API
-        description: AI_projekt API documentation
-        version: 0.0.1
+        description: AI_projekt API doc
         termsOfServiceUrl:
         contactName:
         contactUrl:
         contactEmail:
         license:
         licenseUrl:
-    ribbon:
-        # comma seperated list of profiles to show a ribbon on the GUI
-        displayOnActiveProfiles: dev

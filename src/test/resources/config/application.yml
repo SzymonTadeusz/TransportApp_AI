@@ -58,7 +58,7 @@ jhipster:
     swagger:
         title: AI_projekt API
         description: AI_projekt API documentation
-        version: 0.0.1
+        version: 1.0
         termsOfServiceUrl:
         contactName:
         contactUrl:

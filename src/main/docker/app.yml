@@ -10,7 +10,7 @@ services:
             - SPRING_DATA_MONGODB_DATABASE=AI_projekt
             - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
         ports:
-            - 8080:8080
+            - 8081:8081
     ai_projekt-mongodb:
         extends:
             file: mongodb.yml

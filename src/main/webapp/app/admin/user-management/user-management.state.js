@@ -47,7 +47,7 @@
             url: '/user/:login',
             data: {
                 authorities: ['ROLE_ADMIN'],
-                pageTitle: 'AI_projekt'
+                pageTitle: 'TransportApp'
             },
             views: {
                 'content@': {
