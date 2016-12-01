@@ -1,9 +1,12 @@
 package pl.edu.wat.wcy.isi.ai.transportApp.domain;
 
+import org.springframework.cloud.cloudfoundry.com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -25,8 +28,25 @@ public class Driver implements Serializable {
     @Field("driving_license_no")
     private String drivingLicenseNo;
 
+    @Min(value = 1900)
+    @Max(value = 2016)
     @Field("birth_date")
     private Integer birthDate;
+
+    public Driver(){}
+
+    public Driver(String json){
+        ObjectMapper objectMapper = new ObjectMapper();
+        try{
+            Driver added = objectMapper.reader(Driver.class).readValue(json);
+            this.setBirthDate(added.getBirthDate());
+            this.setDrivingLicenseNo(added.getDrivingLicenseNo());
+            this.setName(added.getName());
+            this.setId(added.getId());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
     public String getId() {
         return id;
