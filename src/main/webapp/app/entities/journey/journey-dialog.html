@@ -4,7 +4,7 @@
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="vm.clear()">&times;</button>
-        <h4 class="modal-title" id="myJourneyLabel">Create or edit a Journey</h4>
+        <h4 class="modal-title" id="myJourneyLabel">Dodaj podroz</h4>
     </div>
     <div class="modal-body">
         <jhi-alert-error></jhi-alert-error>
@@ -14,7 +14,7 @@
                     ng-model="vm.journey.id" readonly />
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_date">Date</label>
+            <label class="control-label" for="field_date">Data</label>
                 <div class="input-group">
                     <input id="field_date" type="text" class="form-control" name="date" uib-datepicker-popup="{{dateformat}}" ng-model="vm.journey.date" is-open="vm.datePickerOpenStatus.date"
                     />
@@ -24,7 +24,7 @@
                 </div>
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_rating">Rating</label>
+            <label class="control-label" for="field_rating">Ocena</label>
             <input type="number" class="form-control" name="rating" id="field_rating"
                     ng-model="vm.journey.rating"
                     min="0" max="5" />
@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_taxi">Taxi</label>
+            <label class="control-label" for="field_taxi">Samochod</label>
             <input type="text" class="form-control" name="taxi" id="field_taxi"
                     ng-model="vm.journey.taxi"
                      />
@@ -53,10 +53,10 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
-            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Anuluj</span>
         </button>
         <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
-            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Zapisz</span>
         </button>
     </div>
 </form>

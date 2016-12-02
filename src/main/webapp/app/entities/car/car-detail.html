@@ -1,10 +1,10 @@
 
 <div>
-    <h2><span>Car</span> {{vm.car.id}}</h2>
+    <h2><span>Samochod</span> {{vm.car.brand}} {{vm.car.model}} {{vm.car.plateNo}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="dl-horizontal jh-entity-details">
-        <dt><span>Brand</span></dt>
+        <dt><span>Marka</span></dt>
         <dd>
             <span>{{vm.car.brand}}</span>
         </dd>
@@ -12,20 +12,24 @@
         <dd>
             <span>{{vm.car.model}}</span>
         </dd>
-        <dt><span>Plate No</span></dt>
+        <dt><span>Numer rejestracyjny</span></dt>
         <dd>
             <span>{{vm.car.plateNo}}</span>
+        </dd>
+        <dt><span>Kierowca</span></dt>
+        <dd>
+            <span>{{vm.car.driver}}</span>
         </dd>
     </dl>
 
     <button type="submit"
             ui-sref="{{ vm.previousState }}"
             class="btn btn-info">
-        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Powrot</span>
     </button>
 
     <button type="button" ui-sref="car-detail.edit({id:vm.car.id})" class="btn btn-primary">
         <span class="glyphicon glyphicon-pencil"></span>
-        <span class="hidden-xs hidden-sm"> Edit</span>
+        <span class="hidden-xs hidden-sm"> Edytuj</span>
     </button>
 </div>
