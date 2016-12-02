@@ -1,5 +1,6 @@
 package pl.edu.wat.wcy.isi.ai.transportApp.domain;
 
+import org.springframework.cloud.cloudfoundry.com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -30,7 +31,22 @@ public class Journey implements Serializable {
     private Integer rating;
 
     @Field("taxi")
-    private String taxi;
+    private Car taxi;
+
+    public Journey(){}
+
+    public Journey(String json){
+        ObjectMapper objectMapper = new ObjectMapper();
+        try{
+            Journey added = objectMapper.reader(Journey.class).readValue(json);
+            this.setId(added.getId());
+            this.setRating(added.getRating());
+            this.setDate(added.getDate());
+            this.setTaxi(added.getTaxi());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
     public String getId() {
         return id;
@@ -66,17 +82,21 @@ public class Journey implements Serializable {
         this.rating = rating;
     }
 
-    public String getTaxi() {
+    public Car getTaxi() {
         return taxi;
     }
 
-    public Journey taxi(String taxi) {
+    public Journey taxi(Car taxi) {
         this.taxi = taxi;
         return this;
     }
 
-    public void setTaxi(String taxi) {
+    public void setTaxi(Car taxi) {
         this.taxi = taxi;
+    }
+
+    public void setTaxi(String taxi) {
+        this.taxi = new Car(taxi);
     }
 
     @Override
