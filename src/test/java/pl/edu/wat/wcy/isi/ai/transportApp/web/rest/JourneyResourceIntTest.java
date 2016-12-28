@@ -2,6 +2,7 @@ package pl.edu.wat.wcy.isi.ai.transportApp.web.rest;
 
 import pl.edu.wat.wcy.isi.ai.transportApp.AiProjektApp;
 
+import pl.edu.wat.wcy.isi.ai.transportApp.domain.Car;
 import pl.edu.wat.wcy.isi.ai.transportApp.domain.Journey;
 import pl.edu.wat.wcy.isi.ai.transportApp.repository.JourneyRepository;
 import pl.edu.wat.wcy.isi.ai.transportApp.service.JourneyService;
@@ -45,8 +46,8 @@ public class JourneyResourceIntTest {
     private static final Integer DEFAULT_RATING = 0;
     private static final Integer UPDATED_RATING = 1;
 
-    private static final String DEFAULT_TAXI = "AAAAA";
-    private static final String UPDATED_TAXI = "BBBBB";
+    private static final Car DEFAULT_TAXI = new Car();
+    private static final Car UPDATED_TAXI = new Car();
 
     @Inject
     private JourneyRepository journeyRepository;

@@ -1,18 +1,18 @@
 
 <div>
-    <h2><span>Journey</span> {{vm.journey.id}}</h2>
+    <h2><span>Podroz</span> {{vm.journey.taxi}} ({{vm.journey.date}})</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="dl-horizontal jh-entity-details">
-        <dt><span>Date</span></dt>
+        <dt><span>Data</span></dt>
         <dd>
             <span>{{vm.journey.date | date:'mediumDate'}}</span>
         </dd>
-        <dt><span>Rating</span></dt>
+        <dt><span>Ocena</span></dt>
         <dd>
             <span>{{vm.journey.rating}}</span>
         </dd>
-        <dt><span>Taxi</span></dt>
+        <dt><span>Samochod</span></dt>
         <dd>
             <span>{{vm.journey.taxi}}</span>
         </dd>
@@ -21,11 +21,11 @@
     <button type="submit"
             ui-sref="{{ vm.previousState }}"
             class="btn btn-info">
-        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Powrot</span>
     </button>
 
     <button type="button" ui-sref="journey-detail.edit({id:vm.journey.id})" class="btn btn-primary">
         <span class="glyphicon glyphicon-pencil"></span>
-        <span class="hidden-xs hidden-sm"> Edit</span>
+        <span class="hidden-xs hidden-sm"> Edytuj</span>
     </button>
 </div>

@@ -1,5 +1,6 @@
 package pl.edu.wat.wcy.isi.ai.transportApp.domain;
 
+import org.springframework.cloud.cloudfoundry.com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
@@ -30,6 +31,22 @@ public class Car implements Serializable {
 
     @Field("driver")
     private Driver driver;
+
+    public Car(){}
+
+    public Car(String json){
+        ObjectMapper objectMapper = new ObjectMapper();
+        try{
+            Car added = objectMapper.reader(Car.class).readValue(json);
+            this.setId(added.getId());
+            this.setBrand(added.getBrand());
+            this.setModel(added.getModel());
+            this.setPlateNo(added.getId());
+            this.setDriver(added.getDriver());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
     public String getId() {
         return id;

@@ -1,6 +1,6 @@
 
 <div>
-    <h2><span>Driver</span> {{vm.driver.id}}</h2>
+    <h2><span>Kierowca</span> {{vm.driver.name}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="dl-horizontal jh-entity-details">
@@ -8,11 +8,11 @@
         <dd>
             <span>{{vm.driver.name}}</span>
         </dd>
-        <dt><span>Driving License No</span></dt>
+        <dt><span>Numer prawa jazdy</span></dt>
         <dd>
             <span>{{vm.driver.drivingLicenseNo}}</span>
         </dd>
-        <dt><span>Birth Date</span></dt>
+        <dt><span>Data urodzenia</span></dt>
         <dd>
             <span>{{vm.driver.birthDate}}</span>
         </dd>
@@ -21,11 +21,11 @@
     <button type="submit"
             ui-sref="{{ vm.previousState }}"
             class="btn btn-info">
-        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Powrot</span>
     </button>
 
     <button type="button" ui-sref="driver-detail.edit({id:vm.driver.id})" class="btn btn-primary">
         <span class="glyphicon glyphicon-pencil"></span>
-        <span class="hidden-xs hidden-sm"> Edit</span>
+        <span class="hidden-xs hidden-sm"> Edytuj</span>
     </button>
 </div>
