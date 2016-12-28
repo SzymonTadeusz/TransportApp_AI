@@ -5,15 +5,17 @@
         .module('aiProjektApp')
         .controller('CarDialogController', CarDialogController);
 
-    CarDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Car'];
+    CarDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Car', 'Driver'];
 
-    function CarDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Car) {
+    function CarDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Car, Driver) {
         var vm = this;
 
         vm.car = entity;
         vm.clear = clear;
         vm.save = save;
+        vm.drivers = [];
 
+        getDrivers();
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();
         });
@@ -42,5 +44,10 @@
         }
 
 
+        function getDrivers() {
+            Driver.query(function(result) {
+                vm.drivers = result;
+            });
+        }
     }
 })();

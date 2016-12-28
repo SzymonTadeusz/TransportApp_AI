@@ -33,9 +33,10 @@
         </div>
         <div class="form-group">
             <label class="control-label" for="field_plateNo">Driver</label>
-            <input type="search" class="form-control" name="driver" id="field_driver"
-                    ng-model="vm.car.driver"
-                     />
+            <select class="form-control" name="driver" id="field_driver"
+                    ng-model="vm.car.driver" ng-options="driver.name for driver in vm.drivers track by driver.id">
+
+               </select>
         </div>
 
     </div>
