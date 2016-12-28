@@ -95,10 +95,6 @@ public class Journey implements Serializable {
         this.taxi = taxi;
     }
 
-    public void setTaxi(String taxi) {
-        this.taxi = new Car(taxi);
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) {

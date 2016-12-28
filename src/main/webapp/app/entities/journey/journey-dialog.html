@@ -45,9 +45,10 @@
         </div>
         <div class="form-group">
             <label class="control-label" for="field_taxi">Samochod</label>
-            <input type="text" class="form-control" name="taxi" id="field_taxi"
-                    ng-model="vm.journey.taxi"
-                     />
+            <select type="text" class="form-control" name="taxi" id="field_taxi"
+                    ng-model="vm.journey.taxi" ng-options="car.plateNo for car in vm.cars track by car.id">
+            </select>
+            </div>
         </div>
 
     </div>
