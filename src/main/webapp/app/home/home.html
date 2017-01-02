@@ -1,22 +1,81 @@
-<div ng-cloak>
-    <div class="row">
-        <div class="col-md-4">
-            <span class="hipster img-responsive img-rounded"></span>
+
+<div style="max-height: 570px; margin-left: -15px; margin-right: -15px; margin-top: -20px;" ng-controller="HomeController">
+    <uib-carousel active="active" interval="myInterval" no-wrap="false">
+        <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+            <img ng-src="{{slide.image}}" style="margin:auto;">
+            <div class="carousel-caption">
+                <h3 style="font-weight: bold; color: white;">{{slide.title}}</h3>
+                <p>{{slide.text}}</p>
+            </div>
+        </uib-slide>
+    </uib-carousel>
+</div>
+
+<section id="ourRules" style="padding: 60px 0;">
+    <div class="container">
+        <div class="row" style="padding-left: 10px; padding-right: 10px;">
+            <div class="features">
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-shield"></i>
+                        <h2>Bezpieczeństwo</h2>
+                        <h3>Starannie wyselekcjonowani kierowcy i pojazdy</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-refresh"></i>
+                        <h2>Dyspozycyjność</h2>
+                        <h3>Nasi kierowcy są do Twojej dyspozycji 24 godziny na dobę, 7 dni w tygodniu</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-clock-o"></i>
+                        <h2>Zaangażowanie</h2>
+                        <h3>Średni czas dojazdu kierowcy do klienta to 4 minuty 37 sekund</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+            </div><!--/.services-->
+        </div><!--/.row-->
+    </div><!--/.container-->
+</section><!--/#feature-->
+
+<section id="partner" style="margin-left: -15px; margin-right: -15px; ">
+    <div class="container" style="padding: 40px 0;">
+        <div class="center wow fadeInDown">
+            <h2>Nasi partnerzy</h2>
+            <p class="lead">Stale współpracujemy z wieloma prestiżowymi firmami, aby zapewnić najlepszą jakość oferowanych usług</p>
         </div>
-        <div class="col-md-8">
-            <h1>Witamy w aplikacji TransportApp!</h1>
 
-            <div ng-switch="vm.isAuthenticated()">
-                <p class="lead" ng-switch-when="true">Mozesz juz zaczac korzystac z systemu!</p>
-                <div class="alert alert-success" ng-switch-when="true">
-                    Zalogowany jako <b>{{vm.account.login}}</b>.
-                </div>
+        <div class="partners">
+            <ul style="margin-left: 70px;">
+                <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" src="../../content/images/partners/partner1.png"></a></li>
+                <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" src="../../content/images/partners/partner2.png"></a></li>
+                <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms" src="../../content/images/partners/partner3.png"></a></li>
+                <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="../../content/images/partners/partner4.png"></a></li>
+                <li> <a href="#"><img class="img-responsive wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms" src="../../content/images/partners/partner5.png"></a></li>
+            </ul>
+        </div>
+    </div><!--/.container-->
+</section>
 
-                <p class="lead" ng-switch-when="false">Zaloguj sie aby moc zaczac korzystac z systemu</p>
-                <div class="alert alert-warning" ng-switch-when="false">
-                    Nie jestes zalogowany. Zaloguj sie lub <a class="alert-link" ui-sref="register">stworz nowe konto.</a>
+<section id="conatcat-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="media contact-info wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="pull-left">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="media-body">
+                        <h2>Masz jakieś pytania?</h2>
+                        <p>Skontaktuj się z nami pod numerem 800 700 600 (Infolinia czynna całą dobę)</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </div><!--/.container-->
+</section>
