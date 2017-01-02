@@ -9,7 +9,6 @@
         .controller('DriverController', DriverController);
 
     DriverController.$inject = ['$scope', '$state'];
-    console.log("test");
     function DriverController ($scope, $state) {
         var vm = this;
         vm.ranking = [];
@@ -19,7 +18,6 @@
             $.ajax({
                 url: "api/driverRanking",
                 type: "GET",
-                data: {howMany: 10},
                 success: function (response) {
                     vm.ranking = response;
                 }
