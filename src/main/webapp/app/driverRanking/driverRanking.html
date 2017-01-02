@@ -1,0 +1,21 @@
+<div>
+    <h2>Ranking kierowcow</h2>
+    <jhi-alert></jhi-alert>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+            <tr>
+                <th><span>Imie i nazwisko</span></th>
+                <th><span>Srednia ocena</span></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="driver in vm.ranking track by driver.id">
+                <td>{{driver.name}}</td>
+                <td>{{driver.avergeRating}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

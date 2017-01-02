@@ -8,7 +8,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
+import java.util.HashMap;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Service Implementation for managing Journey.
@@ -17,7 +19,7 @@ import java.util.List;
 public class JourneyServiceImpl implements JourneyService{
 
     private final Logger log = LoggerFactory.getLogger(JourneyServiceImpl.class);
-    
+
     @Inject
     private JourneyRepository journeyRepository;
 
@@ -35,7 +37,7 @@ public class JourneyServiceImpl implements JourneyService{
 
     /**
      *  Get all the journeys.
-     *  
+     *
      *  @return the list of entities
      */
     public List<Journey> findAll() {
@@ -66,4 +68,5 @@ public class JourneyServiceImpl implements JourneyService{
         log.debug("Request to delete Journey : {}", id);
         journeyRepository.delete(id);
     }
+
 }
