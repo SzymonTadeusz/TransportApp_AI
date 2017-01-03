@@ -26,6 +26,26 @@
             resolve: {
             }
         })
+        .state('journey-order', {
+            parent: 'app',
+            url: '/order',
+            data: {
+                authorities: ['ROLE_USER']
+            },
+            onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
+                $uibModal.open({
+                    templateUrl: 'app/entities/journey/journey-order.html',
+                    controller: 'JourneyOrderController',
+                    controllerAs: 'vm',
+                    backdrop: 'static',
+                    size: 'lg',
+                }).result.then(function() {
+                    $state.go('home');
+                }, function() {
+                    $state.go('home');
+                });
+            }]
+        })
         .state('journey-detail', {
             parent: 'entity',
             url: '/journey/{id}',

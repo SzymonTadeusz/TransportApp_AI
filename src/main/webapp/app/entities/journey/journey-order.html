@@ -1,0 +1,38 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myJourneyLabel">Zamow taksowke</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group">
+            <label for="location">Adres</label>
+            <input type="location" class="form-control" name="location" id="location"
+                   ng-model="vm.location" />
+        </div>
+        <div ng-show="showCounter">
+            Nasz kierowca jedzie do Ciebie samochodem marki <span ng-bind="vm.car.brand"></span><br/>
+            Bedzie za <span  ng-bind="counter"></span>.
+        </div>
+
+        <div ng-init="vm.rating=3"></div>
+        <div ng-show="showRating">
+            <div class="star-rating" star-rating rating-value="vm.rating" data-max="5" on-rating-selected="rateFunction(rating)"></div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Anuluj</span>
+        </button>
+        <div type="submit" ng-click="vm.order()" ng-disabled="showCounter"
+             ng-class="{'disabled': showCounter}" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Zamow</span>
+        </div>
+    </div>
+</form>
