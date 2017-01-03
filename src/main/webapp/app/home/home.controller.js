@@ -17,14 +17,14 @@
 
         slides.push({
                 image: "../../content/images/slider/bg1.jpg",
-                title: "Sample title 1",
-                text: "Sample text 1",
+                title: "Zaufany przewoznik",
+                text: "Przewiezlismy juz 250 tysiecy klientow!",
                 id: currIndex++
             },
             {
                 image: "../../content/images/slider/bg2.jpg",
-                title: "Sample title 2",
-                text: "Sample text 2",
+                title: "Pozytywne opinie",
+                text: "97% klientow jest zadowolonych z naszych uslug!",
                 id: currIndex++
             });
 

@@ -19,6 +19,10 @@
         {
             "fieldName": "taxi",
             "fieldType": "String"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
         }
     ],
     "dto": "no",

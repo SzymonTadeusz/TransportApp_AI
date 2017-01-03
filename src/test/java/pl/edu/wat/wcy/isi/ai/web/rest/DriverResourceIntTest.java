@@ -1,12 +1,12 @@
 package pl.edu.wat.wcy.isi.ai.web.rest;
 
-import pl.edu.wat.wcy.isi.ai.transportApp.domain.Driver;
-import pl.edu.wat.wcy.isi.ai.transportApp.repository.DriverRepository;
-import pl.edu.wat.wcy.isi.ai.transportApp.service.DriverService;
-import pl.edu.wat.wcy.isi.ai.transportApp.service.dto.DriverDTO;
-import pl.edu.wat.wcy.isi.ai.transportApp.service.mapper.DriverMapper;
-import pl.edu.wat.wcy.isi.ai.transportApp.web.rest.DriverResource;
-import pl.edu.wat.wcy.isi.ai.transportApp.AiProjektApp;
+import pl.edu.wat.wcy.isi.ai.transportapp.domain.Driver;
+import pl.edu.wat.wcy.isi.ai.transportapp.repository.DriverRepository;
+import pl.edu.wat.wcy.isi.ai.transportapp.service.DriverService;
+import pl.edu.wat.wcy.isi.ai.transportapp.service.dto.DriverDTO;
+import pl.edu.wat.wcy.isi.ai.transportapp.service.mapper.DriverMapper;
+import pl.edu.wat.wcy.isi.ai.transportapp.web.rest.DriverResource;
+import pl.edu.wat.wcy.isi.ai.transportapp.AiProjektApp;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -21,7 +21,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import pl.edu.wat.wcy.isi.ai.transportApp.web.rest.TestUtil;
+import pl.edu.wat.wcy.isi.ai.transportapp.web.rest.TestUtil;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;

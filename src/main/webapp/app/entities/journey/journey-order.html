@@ -14,8 +14,9 @@
                    ng-model="vm.location" />
         </div>
         <div ng-show="showCounter">
-            Nasz kierowca jedzie do Ciebie samochodem marki <span ng-bind="vm.car.brand"></span><br/>
-            Bedzie za <span  ng-bind="counter"></span>.
+            Nasz kierowca jedzie do Ciebie samochodem <span ng-bind="vm.car.brand" ></span>
+            <span ng-bind="vm.car.model"></span> o numerze rejestracyjnym <span ng-bind="vm.car.plateNo"> </span><br/>
+            Szacowany czas oczekiwania: <span  ng-bind="counter"></span> sekund.
         </div>
 
         <div ng-init="vm.rating=3"></div>

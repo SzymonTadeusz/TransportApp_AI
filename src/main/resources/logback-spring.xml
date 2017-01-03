@@ -22,7 +22,7 @@
     </appender>
 -->
 
-    <logger name="pl.edu.wat.wcy.isi.ai.transportApp" level="#logback.loglevel#"/>
+    <logger name="pl.edu.wat.wcy.isi.ai.transportapp" level="#logback.loglevel#"/>
 
     <logger name="javax.activation" level="WARN"/>
     <logger name="javax.mail" level="WARN"/>

@@ -118,6 +118,7 @@
                                 date: null,
                                 rating: null,
                                 taxi: null,
+                                address: null,
                                 id: null
                             };
                         }

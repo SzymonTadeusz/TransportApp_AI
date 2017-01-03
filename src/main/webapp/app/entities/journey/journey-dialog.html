@@ -31,15 +31,15 @@
             <div ng-show="editForm.rating.$invalid">
                 <p class="help-block"
                     ng-show="editForm.rating.$error.min" translate-value-min="0">
-                    This field should be more than 0.
+                    Ocena musi byc wieksza niz 0.
                 </p>
                 <p class="help-block"
                     ng-show="editForm.rating.$error.max">
-                    This field cannot be more than 5.
+                    Ocena nie moze byc wieksza niz 5.
                 </p>
                 <p class="help-block"
                     ng-show="editForm.rating.$error.number">
-                    This field should be a number.
+                    Ocena powinna byc wartoscia liczbowa.
                 </p>
             </div>
         </div>
@@ -48,6 +48,13 @@
             <select type="text" class="form-control" name="taxi" id="field_taxi"
                     ng-model="vm.journey.taxi" ng-options="car.plateNo for car in vm.cars track by car.id">
             </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="field_address">Adres poczatkowy</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                   ng-model="vm.journey.address" />
             </div>
         </div>
 

@@ -6,10 +6,10 @@
 
     angular
         .module('aiProjektApp')
-        .controller('DriverController', DriverController);
+        .controller('DriverRankingController', DriverRankingController);
 
-    DriverController.$inject = ['$scope', '$state'];
-    function DriverController ($scope, $state) {
+    DriverRankingController.$inject = ['$scope', '$state'];
+    function DriverRankingController ($scope, $state) {
         var vm = this;
         vm.ranking = [];
         getRanking();

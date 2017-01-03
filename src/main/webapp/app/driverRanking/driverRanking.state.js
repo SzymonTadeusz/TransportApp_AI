@@ -21,7 +21,7 @@
                 views: {
                     'content@': {
                         templateUrl: 'app/driverRanking/driverRanking.html',
-                        controller: 'DriverController',
+                        controller: 'DriverRankingController',
                         controllerAs: 'vm'
                     }
                 },
